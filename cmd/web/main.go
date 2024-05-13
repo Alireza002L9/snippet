@@ -4,6 +4,7 @@ import (
 	"flag"
 	"log"
 	"net/http"
+	"os"
 )
 
 func main() {
@@ -29,6 +30,7 @@ func main() {
 
 	// Ports 0-1023 are restricted and (typically) can only be used by services 
 	// which have root privileges.
+	// use -help to see all flag line commands
 	log.Printf("Starting server on http://localhost%s", *addr)
 	err := http.ListenAndServe(*addr, mux)
 	log.Fatal(err)
