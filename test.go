@@ -20,7 +20,7 @@ type jobSpecification struct {
 }
 
 func (x jobSpecification) generateResume() string {
-	introduceMsg := fmt.Sprintf("Hello I'm a %s", x.job)
+	introduceMsg := fmt.Sprintf("Hello I'm  %s", x.name)
 	return introduceMsg
 }
 
@@ -69,6 +69,7 @@ func main() {
 			stacks: []string{"react", "three.js"},
 		},
 	}
+	resume := workInfo.generateResume()
 
 	
 	age := calc(1403, 1379)
@@ -90,5 +91,6 @@ func main() {
 	fmt.Printf("hi: %v\n", 42)
 	fmt.Printf("hi: %q\n", "go")
 	fmt.Printf("hi: %#q\n", "go")
+	fmt.Println(resume)
 }
 
