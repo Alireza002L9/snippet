@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 	"net/http"
-	// "os"
+	"os"
 )
 
 func main() {
